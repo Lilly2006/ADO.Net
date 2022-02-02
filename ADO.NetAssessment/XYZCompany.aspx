@@ -1,0 +1,46 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="XYZCompany.aspx.cs" Inherits="OnlineFootWearStore.XYZCompany" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <asp:DropDownList ID="DropDownList1" runat="server" >
+                            <asp:ListItem>Select the Gender</asp:ListItem>
+                            <asp:ListItem Value="Kids">Kids</asp:ListItem>
+                            <asp:ListItem Value="Men">Men</asp:ListItem>
+                            <asp:ListItem Value="Women">Women</asp:ListItem>
+                            
+                        </asp:DropDownList>
+                        <br />
+                        <br />
+                        <asp:Button ID="btnselect" runat="server" OnClick="btnselect_Click" Text="ViewDetails" />
+                    </td> </tr>
+                </table>
+       </div>
+        <hr />
+        <div>
+            <asp:GridView ID="gvDisplay" runat="server"></asp:GridView>
+            <br />
+        </div>
+        <div id="div_property" runat="server">
+            <asp:TextBox ID="txtProductCode" runat="server"  ></asp:TextBox>
+            <asp:Button ID="btnOrder" runat="server" Text="Order" OnClick="btnOrder_Click" />
+            &nbsp;
+            <br />
+            <br />
+        </div>
+        <div>
+            <asp:Button ID="btnStatus" runat="server" Text="Order Status" OnClick="btnStatus_Click" />
+        </div>
+       
+    </form>
+</body>
+</html>
